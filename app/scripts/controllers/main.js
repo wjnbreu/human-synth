@@ -15,6 +15,7 @@ angular.module('humanSynthApp').controller('MainCtrl', ['$scope', '$rootScope', 
 	$scope.data.ready = false;
 	$scope.video = false;
 	$scope.intro = true;
+	$scope.links = [];
 
 
 
@@ -34,7 +35,8 @@ angular.module('humanSynthApp').controller('MainCtrl', ['$scope', '$rootScope', 
 		console.log($scope.data);
 
 		var videoId = $scope.data.fields.videoId;
-
+		$scope.links = $scope.data.fields.links.links;
+		console.log($scope.links);
 		//instantiate video player
 		brightcove.init(videoId);
 	
@@ -43,7 +45,6 @@ angular.module('humanSynthApp').controller('MainCtrl', ['$scope', '$rootScope', 
 	$scope.dropIntro = function(){
 		$scope.intro = false;
 		$scope.player.play();
-		$scope.player.mute();
 	};
 
 	$scope.dropBody = function(){

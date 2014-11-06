@@ -23,6 +23,49 @@
 		}
 	}
 
+	// social
+	.button-group.logo-group{
+		box-sizing: border-box;
+		margin: 50px 0;
+		width: 100%;
+		display: block;
+		margin-bottom: 60px;
+		text-align: center;
+		display: block;
+			
+		.button{
+			-webkit-font-smoothing: antialiased;
+			background-color: white;
+			border-radius: 0;
+			color: black !important;
+			margin: 0;
+			margin-right: 5px;
+			width: 40px;
+			height: 40px;
+			padding: 0;
+			display: inline-block;
+			text-align: center;
+			line-height: 40px;
+			@include smallboxy();
+			@include vendorize(transition, all .1s linear);
+			span{
+				color: black;
+			}
+			&:active, &:hover{
+				@include vendorize(transform, translate(5px,5px));
+				@include vendorize(box-shadow, none);
+			}
+			a{
+				text-decoration: none;
+				color: black;
+				line-height: 35px;
+				padding: 0;
+				vertical-align: middle;
+				font-size: 20px;
+			}
+		}
+	}
+
 
 	//BRIGHTCOVE
 	.fullscreen-brightcove-video{
@@ -120,61 +163,50 @@
 			}
 		}
 	}
-}
 
-.full-synth-image{
-	width: 80%;
-	display: block;
-	position: static;
-	margin-left: 10%;
-	text-align: center;
-	margin-top: 30%;
-	padding-bottom: 200px;
-	img{
-		max-width: 100%;
-	}
-}
-
-
-// social
-.button-group.logo-group{
-	box-sizing: border-box;
-	margin: 50px 0;
-	width: 100%;
-	display: block;
-	margin-bottom: 60px;
-	text-align: center;
-	display: block;
-		
-	.button{
-		-webkit-font-smoothing: antialiased;
-		background-color: white;
-		border-radius: 0;
-		color: black !important;
-		margin: 0;
-		margin-right: 5px;
-		width: 40px;
-		height: 40px;
-		padding: 0;
-		display: inline-block;
+	.full-synth-image{
+		width: 80%;
+		display: block;
+		position: static;
+		margin-left: 10%;
 		text-align: center;
-		line-height: 40px;
-		@include smallboxy();
-		@include vendorize(transition, all .1s linear);
-		span{
-			color: black;
+		margin-top: 30%;
+		padding-bottom: 200px;
+		img{
+			max-width: 100%;
 		}
-		&:active, &:hover{
-			@include vendorize(transform, translate(5px,5px));
-			@include vendorize(box-shadow, none);
-		}
-		a{
-			text-decoration: none;
-			color: black;
-			line-height: 35px;
-			padding: 0;
-			vertical-align: middle;
-			font-size: 20px;
+	}
+
+	.links{
+		position: static;
+		width: 100%;
+		height: auto;
+		z-index: 99;
+
+		ul{
+			list-style-type: none;
+			font-family: 'Helvetica Neue';
+			width: 100%;
+			height: auto;
+			text-align: center;
+			text-transform: uppercase;
+
+			li{
+				width: 100%;
+				font-size: 3em;
+				line-height: 1.5;
+				color: white;
+				&:hover{
+					background-color: white;
+					color: black !important;
+				}
+			}
+
 		}
 	}
 }
+
+
+
+
+

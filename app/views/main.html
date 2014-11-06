@@ -66,9 +66,10 @@
     <div class="image-overlay"></div>
     <img src="images/full-synth.png" alt="Synthesizer blowout diagram" />
   </section>
-</section>
 
-
-
-
+  <section class="links">
+    <ul>
+      <li ng-repeat="link in links"><a href="{{link.link}}" target="self">{{link.name}}</a></li>
+    </ul>
+  </section>
 </section><!--end body-->
