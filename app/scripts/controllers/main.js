@@ -16,8 +16,6 @@ angular.module('humanSynthApp').controller('MainCtrl', ['$scope', '$rootScope', 
 	$scope.video = false;
 	$scope.intro = true;
 
-	//instantiate video player
-	brightcove.init();
 
 
 	//drop spinner after video is ready
@@ -34,14 +32,23 @@ angular.module('humanSynthApp').controller('MainCtrl', ['$scope', '$rootScope', 
 		$scope.data = data[0];
 		$scope.data.ready = true;
 		console.log($scope.data);
+
+		var videoId = $scope.data.fields.videoId;
+
+		//instantiate video player
+		brightcove.init(videoId);
+	
 	});
 
 	$scope.dropIntro = function(){
 		$scope.intro = false;
+		$scope.player.play();
+		$scope.player.mute();
 	};
 
 	$scope.dropBody = function(){
 		$scope.intro = true;
+		$scope.player.pause();
 
 	};
 

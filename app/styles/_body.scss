@@ -22,5 +22,159 @@
 			@include vendorize(transform, scale(1.2));
 		}
 	}
+
+
+	//BRIGHTCOVE
+	.fullscreen-brightcove-video{
+		text-align: center;
+		position: relative;
+		margin: 100px auto 0 auto;
+	}
+
+	.text-body{
+		position: static;
+		display: block;
+		width: 80%;
+		margin: 25px auto;
+		max-width: 1000px;
+		&:before{
+			content: '';
+			height: 3px;
+			background: white;
+			display: block;
+			margin-top: 35px;
+		}
+		&:after{
+			content: '';
+			height: 3px;
+			background: white;
+			display: block;
+		}
+		h1{
+			margin-top: 15px;
+			line-height: 1;
+		}
+		h2{
+			margin-top: -55px;
+			line-height: 40px;
+			a{
+				&:hover{
+					opacity: 0.8;
+				}
+			}
+		}
+		.lighter{
+			font-family: 'Helvetica Neue', Helvetica, sans-serif;
+			font-weight: lighter;
+			margin: 0 0 0 7px;
+		}
+		.rhizomatiks{
+			display: inline-block;
+			position: absolute;
+			background: url(../images/rhizomatiks.png) no-repeat bottom center;
+			height: 45px;
+			width: 200px;
+			background-size: contain;
+			@media (max-width: 1024px){
+				width: 130px;
+				background-position: bottom center;
+				height: 35px;
+			}
+		}
+	}
+
+	.image-body{
+		width: 80%;
+		margin: 35px auto 0 auto;
+		height: auto;
+		display: block;
+		position: static;
+
+		.top-row{
+			width: 100%;
+			height: auto;
+			display: block;
+			position: relative;
+			.top-row-image{
+				width: 50%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: auto;
+				img{
+					max-width: 100%;
+				}
+			}
+			.top-row-text{
+				width: 45%;
+				height: auto;
+				position: absolute;
+				top: 0;
+				right: 0;
+				margin-left: 5%;
+				margin-top: 0;
+				line-height: 1.5;
+				p{
+					margin: 0;
+				}
+			}
+		}
+	}
 }
 
+.full-synth-image{
+	width: 80%;
+	display: block;
+	position: static;
+	margin-left: 10%;
+	text-align: center;
+	margin-top: 30%;
+	padding-bottom: 200px;
+	img{
+		max-width: 100%;
+	}
+}
+
+
+// social
+.button-group.logo-group{
+	box-sizing: border-box;
+	margin: 50px 0;
+	width: 100%;
+	display: block;
+	margin-bottom: 60px;
+	text-align: center;
+	display: block;
+		
+	.button{
+		-webkit-font-smoothing: antialiased;
+		background-color: white;
+		border-radius: 0;
+		color: black !important;
+		margin: 0;
+		margin-right: 5px;
+		width: 40px;
+		height: 40px;
+		padding: 0;
+		display: inline-block;
+		text-align: center;
+		line-height: 40px;
+		@include smallboxy();
+		@include vendorize(transition, all .1s linear);
+		span{
+			color: black;
+		}
+		&:active, &:hover{
+			@include vendorize(transform, translate(5px,5px));
+			@include vendorize(box-shadow, none);
+		}
+		a{
+			text-decoration: none;
+			color: black;
+			line-height: 35px;
+			padding: 0;
+			vertical-align: middle;
+			font-size: 20px;
+		}
+	}
+}

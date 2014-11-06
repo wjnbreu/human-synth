@@ -57,7 +57,11 @@ angular.module('humanSynthApp').factory('brightcove', ['$rootScope', function ($
 
   window.onTemplateReady = function(evt){
     videoPlayer = player.getModule(APIModules.VIDEO_PLAYER);
+    
+    //send message that video is ready
     $rootScope.$broadcast('playerready', videoPlayer);
+    
+
     //get ref to object so we can resize window
     videoContainer = $('#myExperience');
     console.log(evt);
@@ -73,7 +77,7 @@ angular.module('humanSynthApp').factory('brightcove', ['$rootScope', function ($
       'playerKey' : 'AQ~~%2CAAABuJ3Komk~%2CgXybzBdQzgLgC0zHvAZXtMeryIVplW-t',
       'width': width,
       'height': height,
-      'videoId': id
+      'videoID': id
     };
 
     playerTemplate = '<div style=\"display:none\"></div><object id=\"myExperience\" class=\"BrightcoveExperience\"><param name=\"bgcolor\" value=\"#FFFFFF\" /><param name=\"width\" value=\"{{width}}\" /><param name=\"height\" value=\"{{height}}\" /><param name=\"playerID\" value=\"{{playerID}}\" /><param name=\"playerKey\" value=\"{{playerKey}}\" /><param name=\"isSlim\" value=\"true\" /><param name=\"autoStart\" value=\"false\" /><param name=\"isVid\" value=\"true\" /><param name=\"isUI\" value=\"true\" /><param name=\"dynamicStreaming\" value=\"true\" /><param name=\"@videoPlayer\" value=\"{{videoID}}\"; /><param name=\"includeAPI\" value=\"true\" /><param name=\"linkBaseURL\" value=\"http://www.redbullmusicacademy.com/magazine/human-synthesizer\"/><param name=\"templateLoadHandler\" value=\"onTemplateLoad\" /><param name=\"templateReadyHandler\" value=\"onTemplateReady\" /></object>';

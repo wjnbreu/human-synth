@@ -20,8 +20,55 @@
 
 <!--MAIN BODY-->
 <section class="main">
+  
   <!--exit-->
   <a class="exit-icon" ng-click="dropBody()"><div class="exit fa fa-times"></div></a>
+ 
   <!--BRIGHTCOVE-->
   <section class="fullscreen-brightcove-video" id="player"></section>
+
+   <!--SOCIAL-->
+    <section class="button-group logo-group">
+      
+      <div class="button twitter">
+        <a href="https://twitter.com/share?url={{data.fields.shareUrl}}/&amp;via=rbma&amp;text={{data.fields.twitterShareText}}" target="blank"><span class="fa fa-twitter"></span>
+        </a>
+      </div>
+
+      <div class="button facebook">
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{data.fields.shareUrl}}/" target="blank"><span class="fa fa-facebook"></span>
+        </a>
+      </div>
+    </section>
+
+  <!--INTRO TEXT-->
+  <section class="text-body">
+    <h1>{{data.fields.title}}</h1>
+    <h2><a href="http://www.redbullmusicacademy.com/" target="blank">Red Bull Music Academy</a> <span class="lighter">x</span> <a href="http://rhizomatiks.com/" target="blank"><span class="rhizomatiks"></span></a></h2>
+  </section>
+
+   <!--IMAGES-->
+  <section class="image-body">
+    <div class="top-row">
+      <div class="top-row-image">
+        <img src="images/machine.svg" alt="Synthesizer diagram" />
+      </div>
+      <!--INJECT DESCRIPTION-->
+      <div class="top-row-text">
+        <p>{{data.fields.description}}</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!--LARGE IMAGES-->
+  <section class="full-synth-image">
+    <div class="image-overlay"></div>
+    <img src="images/full-synth.png" alt="Synthesizer blowout diagram" />
+  </section>
+</section>
+
+
+
+
 </section><!--end body-->
