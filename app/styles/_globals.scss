@@ -1,0 +1,83 @@
+
+
+
+html{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: black;
+  color: white;
+}
+
+h1,h2,h3{
+  font-family: clan, 'Helvetica Neue', helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1{
+  font-size: 3em;
+  font-family: clan, helvetica, sans-serif;
+}
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+
+p{
+  font-family: clan, 'Helvetica Neue', helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 0.7em;
+}
+
+.frame{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+
+.spinner{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  overflow: hidden;
+  .fa{
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    width: 120%;
+    margin-left: -10%;
+    margin-top: 25%;
+    color: white;
+    font-size: 2em;
+  }
+}
+
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+    cursor: pointer !important;
+}
+
+
+//REMOVE SCROLLBAR
+
+::-webkit-scrollbar{
+  display: none;
+}
+
