@@ -16,31 +16,55 @@
 		z-index: 1;
 	}
 	.title{
-		display: inline;
 		position: absolute;
 		top: 30%;
-		width: 50%;
-		left: 25%;
-		color: white;
-		background-color: rgba(0,0,0,0.7);
+		width: 60%;
+		left: 20%;
+		text-align: center;
+		color: black;
 		z-index: 99;
+		height: 200px;
+		background-color: rgba(255,255,255,0.7);
+		@include vendorize(border-radius, 10px);
+		.title-left{
+			width: 70%;
+			float: left;
+			h2{
+				text-align: left;
+				text-transform: uppercase;
+				margin-left: 60px;
+				line-height: 1;
+				margin-top: 60px;
+				margin-bottom: 0;
+			}
+			p{
+				font-size: 1.5em;
+				margin-top: 0;
+				vertical-align: middle;
+				text-align: left;
+				padding: 0 20px;
+				margin-left: 40px;
+			}
+		}
+		.title-right{
+			width: 30%;
+			float: right;
+		}
 		h1{
-			text-align: center;
 			text-transform: uppercase;
 			line-height: 1;
 			margin: 0;
-			padding: 20px;
-			font-size: 10em;
+			font-size: 7em;
+			line-height: 200px;
+			vertical-align: middle;
 			@media (max-width: $phone){
 				font-size: 3em;
 
 			}
 		}
 		&:hover{
-			background-color: rgba(255,255,255,0.7);
-			h1{
-				color: black;
-			}
+			background-color: rgba(0,0,0,0.7);
+			color: white;
 		}
 	}
 }

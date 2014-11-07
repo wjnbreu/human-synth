@@ -7,7 +7,13 @@
   <!--TITLE VIDEO-->
   <section class="intro" ng-if="video && intro">
     <section class="title" ng-click="dropIntro()">
-      <h1>PLAY</h1>
+      <div class="title-left">
+        <h2>The Human Synthesizer</h2>
+        <p>{{data.fields.shortDescription}}</p>
+      </div>
+      <div class="title-right">
+        <h1 class="fa fa-play-circle"></h1>
+      </div>
     </section>
     <video id="video" width="100%" height="100%" loop autoplay class="visible" loaded-event>
       <source src="http://dus8ti0yrnpxl.cloudfront.net/human-synth/scroll-4eva-doubled-up-bw.webm" type="video/webm">
