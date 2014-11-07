@@ -62,14 +62,34 @@
 
 
   <!--LARGE IMAGES-->
-  <section class="full-synth-image">
+  <section class="full-synth-image" >
     <div class="image-overlay"></div>
     <img src="images/full-synth.png" alt="Synthesizer blowout diagram" />
   </section>
 
-  <section class="links">
-    <ul>
-      <li ng-repeat="link in links"><a href="{{link.link}}" target="self">{{link.name}}</a></li>
+  <section class="major-links">
+    <h1>RBMA Synth Essentials</h1>
+    <ul class="big-column">
+      <li><a href="#" target="self">Bob Moog Lecture</a></li>
+      <li><a href="#" target="self">The Story Of The BBC Radiophonic Workshop</a></li>
+      <li><a href="http://www.redbullmusicacademy.com/lectures/tom-oberheim-polyphonic-one-love" target="self">Tom Oberheim Lecture</a></li>
     </ul>
   </section>
+
+    
+  <section class="minor-links">
+    <div class="col left">
+      <ul class="column">
+        <li ng-repeat="link in links | orderBy:'name' | slice:0:15 "><a href="{{link.link}}" target="self">{{link.name}}</a></li>
+      </ul>
+    </div>
+
+
+    <div class="col right">
+      <ul class="column">
+        <li ng-repeat="link in links | orderBy:'name' | slice:15:30 "><a href="{{link.link}}" target="self">{{link.name}}</a></li>
+      </ul>
+    </div>
+  </section><!--end minor links-->
+
 </section><!--end body-->
