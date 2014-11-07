@@ -15,8 +15,8 @@ angular.module('humanSynthApp').factory('brightcove', ['$rootScope', function ($
 
   //options
   var vidRatio = 640 / 360;
-  var width =  $(window).width() / 1.5;
-  var height = ($(window).width() / 1.5) / vidRatio;
+  var width =  $(window).width() / 1.4;
+  var height = ($(window).width() / 1.4) / vidRatio;
   var playerTemplate = '';
   var player = {};
   var APIModules = {};
@@ -38,8 +38,8 @@ angular.module('humanSynthApp').factory('brightcove', ['$rootScope', function ($
   };
 
   var resize = function(){
-    var newWidth = $(window).width() / 1.5;
-    var newHeight = ($(window).width() / 1.5) / vidRatio;
+    var newWidth = $(window).width() / 1.4;
+    var newHeight = ($(window).width() / 1.4) / vidRatio;
 
     videoContainer.attr('width', newWidth);
     videoContainer.attr('height', newHeight);

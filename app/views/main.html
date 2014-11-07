@@ -9,9 +9,9 @@
     <section class="title" ng-click="dropIntro()">
       <h1>PLAY</h1>
     </section>
-    <video id="video" width="100%" height="100%" loop autoplay class="visible">
-      <source src="media/scroll-4eva.mp4" type="video/mp4">
-      <source src="media/clap.webm" type="video/webm">
+    <video id="video" width="100%" height="100%" loop autoplay class="visible" loaded-event>
+      <source src="http://dus8ti0yrnpxl.cloudfront.net/human-synth/scroll-4eva-doubled-up-bw.webm" type="video/webm">
+      <source src="http://dus8ti0yrnpxl.cloudfront.net/human-synth/scroll-4eva-doubled-up-bw.mp4" type="video/mp4">
       Your browser doesn't support HTML5 Video.
     </video>
   </section>
@@ -28,18 +28,20 @@
   <section class="fullscreen-brightcove-video" id="player"></section>
 
    <!--SOCIAL-->
-    <section class="button-group logo-group">
-      
-      <div class="button twitter">
-        <a href="https://twitter.com/share?url={{data.fields.shareUrl}}/&amp;via=rbma&amp;text={{data.fields.twitterShareText}}" target="blank"><span class="fa fa-twitter"></span>
-        </a>
-      </div>
+  <section class="button-group logo-group">
+    
+    <div class="button twitter">
+      <a href="https://twitter.com/share?url={{data.fields.shareUrl}}/&amp;via=rbma&amp;text={{data.fields.twitterShareText}}" target="blank"><span class="fa fa-twitter"></span>
+      </a>
+    </div>
 
-      <div class="button facebook">
-        <a href="https://www.facebook.com/sharer/sharer.php?u={{data.fields.shareUrl}}/" target="blank"><span class="fa fa-facebook"></span>
-        </a>
-      </div>
-    </section>
+    <div class="button facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{data.fields.shareUrl}}/" target="blank"><span class="fa fa-facebook"></span>
+      </a>
+    </div>
+  </section>
+
+  
 
   <!--INTRO TEXT-->
   <section class="text-body">
@@ -47,7 +49,9 @@
     <h2><a href="http://www.redbullmusicacademy.com/" target="blank">Red Bull Music Academy</a> <span class="lighter">x</span> <a href="http://rhizomatiks.com/" target="blank"><span class="rhizomatiks"></span></a></h2>
   </section>
 
-   <!--IMAGES-->
+  
+
+  <!--IMAGES-->
   <section class="image-body">
     <div class="top-row">
       <div class="top-row-image">
@@ -67,6 +71,8 @@
     <img src="images/full-synth.png" alt="Synthesizer blowout diagram" />
   </section>
 
+  
+  <!--MAJOR LINKS-->
   <section class="major-links">
     <h1>RBMA Synth Essentials</h1>
     <ul class="big-column">
@@ -78,18 +84,19 @@
 
     
   <section class="minor-links">
+    
     <div class="col left">
       <ul class="column">
         <li ng-repeat="link in links | orderBy:'name' | slice:0:15 "><a href="{{link.link}}" target="self">{{link.name}}</a></li>
       </ul>
     </div>
-
-
+    
     <div class="col right">
       <ul class="column">
         <li ng-repeat="link in links | orderBy:'name' | slice:15:30 "><a href="{{link.link}}" target="self">{{link.name}}</a></li>
       </ul>
     </div>
+  
   </section><!--end minor links-->
 
 </section><!--end body-->
