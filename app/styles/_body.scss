@@ -1,83 +1,14 @@
 .main{
 	position: absolute;
-	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	height: auto;
+	top: 100%;
 	z-index: 1;
 	display: block;
-	overflow-y: scroll;
 	background: rgba(0,0,0,1);
-	a.exit-icon{
-		position: fixed;
-		top: 0;
-		right: 0;
-		color: white;
-		margin-right: 40px;
-		margin-top: 20px;
-		font-size: 3em;
-		z-index: 999;
-		@include vendorize(transition, all .2s linear);
-		&:hover{
-			@include vendorize(transform, scale(1.2));
-		}
-		@media (max-width: $phone){
-			font-size: 2em;
-			margin-right: 15px;
-
-		}
-	}
-
-	// social
-	.button-group.logo-group{
-		box-sizing: border-box;
-		margin: 50px 0;
-		width: 100%;
-		display: block;
-		margin-bottom: 60px;
-		text-align: center;
-		display: block;
-			
-		.button{
-			-webkit-font-smoothing: antialiased;
-			background-color: white;
-			border-radius: 0;
-			color: black !important;
-			margin: 0;
-			margin-right: 5px;
-			width: 40px;
-			height: 40px;
-			padding: 0;
-			display: inline-block;
-			text-align: center;
-			line-height: 40px;
-			@include smallboxy();
-			@include vendorize(transition, all .1s linear);
-			span{
-				color: black;
-			}
-			&:active, &:hover{
-				@include vendorize(transform, translate(5px,5px));
-				@include vendorize(box-shadow, none);
-			}
-			a{
-				text-decoration: none;
-				color: black;
-				line-height: 35px;
-				padding: 0;
-				vertical-align: middle;
-				font-size: 20px;
-			}
-		}
-	}
 
 
-	//BRIGHTCOVE
-	.fullscreen-brightcove-video{
-		text-align: center;
-		position: relative;
-		margin: 100px auto 0 auto;
-	}
 
 	.text-body{
 		position: static;
@@ -206,7 +137,7 @@
 		display: block;
 		position: static;
 		text-align: center;
-		margin-top: 30%;
+		margin-top: 25%;
 		img{
 			max-width: 80%;
 		}

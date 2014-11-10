@@ -5,47 +5,49 @@
   </section>
 
   <!--TITLE VIDEO-->
-  <section class="intro" ng-if="video && intro">
-    <section class="title" ng-click="dropIntro()">
-      <div class="title-left">
-        <h2>The Human Synthesizer</h2>
-        <p>{{data.fields.shortDescription}}</p>
-      </div>
+  <section class="intro">
+    <section class="title" ng-if="videoOn" ng-click="dropVid()">
       <div class="title-right">
         <h1 class="fa fa-play-circle"></h1>
       </div>
+      <div class="title-left">
+        <h2>{{data.fields.title}}</h2>
+        <p>{{data.fields.shortDescription}}</p>
+      </div>
     </section>
-    <video id="video" width="100%" height="100%" loop autoplay class="visible" loaded-event>
-      <source src="http://dus8ti0yrnpxl.cloudfront.net/human-synth/scroll-4eva-doubled-up-bw.webm" type="video/webm">
-      <source src="http://dus8ti0yrnpxl.cloudfront.net/human-synth/scroll-4eva-doubled-up-bw.mp4" type="video/mp4">
-      Your browser doesn't support HTML5 Video.
-    </video>
+      <video ng-if="videoOn" id="video" width="100%" height="100%" loop loaded-event autoplay class="visible">
+        <source src="http://dus8ti0yrnpxl.cloudfront.net/human-synth/scroll-4-eva.webm" type="video/webm">
+        <source src="http://dus8ti0yrnpxl.cloudfront.net/human-synth/scroll-4-eva.mp4" type="video/mp4">
+        Your browser doesn't support HTML5 Video.
+      </video>
+
+     <!--exit-->
+    <a ng-if="!videoOn" class="exit-icon" ng-click="dropBody()"><div class="exit fa fa-times"></div></a>
+ 
+    <!--BRIGHTCOVE-->
+    <section class="fullscreen-brightcove-video" id="player"></section>
+
+     <!--SOCIAL-->
+    <section class="button-group logo-group">
+      
+      <div class="button twitter">
+        <a href="https://twitter.com/share?url={{data.fields.shareUrl}}/&amp;via=rbma&amp;text={{data.fields.twitterShareText}}" target="blank"><span class="fa fa-twitter"></span>
+        </a>
+      </div>
+
+      <div class="button facebook">
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{data.fields.shareUrl}}/" target="blank"><span class="fa fa-facebook"></span>
+        </a>
+      </div>
+    </section>
+
   </section>
 
  
 
 <!--MAIN BODY-->
 <section class="main">
-  
-  <!--exit-->
-  <a class="exit-icon" ng-click="dropBody()"><div class="exit fa fa-times"></div></a>
- 
-  <!--BRIGHTCOVE-->
-  <section class="fullscreen-brightcove-video" id="player"></section>
 
-   <!--SOCIAL-->
-  <section class="button-group logo-group">
-    
-    <div class="button twitter">
-      <a href="https://twitter.com/share?url={{data.fields.shareUrl}}/&amp;via=rbma&amp;text={{data.fields.twitterShareText}}" target="blank"><span class="fa fa-twitter"></span>
-      </a>
-    </div>
-
-    <div class="button facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u={{data.fields.shareUrl}}/" target="blank"><span class="fa fa-facebook"></span>
-      </a>
-    </div>
-  </section>
 
   
 

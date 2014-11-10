@@ -16,6 +16,7 @@ angular.module('humanSynthApp').controller('MainCtrl', ['$scope', '$rootScope', 
 	$scope.video = false;
 	$scope.intro = true;
 	$scope.links = [];
+	$scope.videoOn = true;
 
 
 
@@ -42,12 +43,14 @@ angular.module('humanSynthApp').controller('MainCtrl', ['$scope', '$rootScope', 
 	
 	});
 
-	$scope.dropIntro = function(){
+	$scope.dropVid = function(){
+		$scope.videoOn = false;
 		$scope.intro = false;
 		$scope.player.play();
 	};
 
 	$scope.dropBody = function(){
+		$scope.videoOn = true;
 		$scope.intro = true;
 		$scope.player.pause();
 
