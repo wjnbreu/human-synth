@@ -6,6 +6,7 @@
 
   <!--TITLE VIDEO-->
   <section class="intro">
+    
     <section class="title" ng-if="videoOn" ng-click="dropVid()">
       <div class="title-right">
         <h1 class="fa fa-play-circle"></h1>
@@ -15,11 +16,16 @@
         <p>{{data.fields.shortDescription}}</p>
       </div>
     </section>
-      <video ng-if="videoOn" id="video" width="100%" height="100%" loop loaded-event autoplay class="visible">
-        <source src="http://dus8ti0yrnpxl.cloudfront.net/human-synth/scroll-4-eva.webm" type="video/webm">
-        <source src="http://dus8ti0yrnpxl.cloudfront.net/human-synth/scroll-4-eva.mp4" type="video/mp4">
-        Your browser doesn't support HTML5 Video.
-      </video>
+
+    <video ng-if="videoOn" id="video" width="100%" height="100%" loop loaded-event autoplay class="visible">
+      <source src="http://dus8ti0yrnpxl.cloudfront.net/human-synth/scroll-4-eva.webm" type="video/webm">
+      <source src="http://dus8ti0yrnpxl.cloudfront.net/human-synth/scroll-4-eva.mp4" type="video/mp4">
+      Your browser doesn't support HTML5 Video.
+    </video>
+
+
+    <!-- DISPLAY PICTURE ON MOBILE -->
+    <div ng-if="videoOn" class="pic-background"></div>
 
      <!--exit-->
     <a ng-if="!videoOn" class="exit-icon" ng-click="dropBody()"><div class="exit fa fa-times"></div></a>
@@ -41,7 +47,7 @@
       </div>
     </section>
 
-  </section>
+  </section> <!--END INTRO-->
 
  
 
