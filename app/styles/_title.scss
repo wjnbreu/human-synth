@@ -30,7 +30,21 @@
 			width: 100%;
 			height: 100%;
 			z-index: 1;
-			background: url(../images/synth-demo.jpg) no-repeat center center;
+			background: url(../images/static-synth.jpg) no-repeat center center;
+			@include vendorize(background-size, cover);
+		}
+	}
+	.play-overlay{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		background: url(../images/play-overlay-03.png) no-repeat center center;
+		@include vendorize(background-size, cover);
+		@media (max-width: $tab){
+			background: url(../images/play-overlay.png) no-repeat center center;
 			@include vendorize(background-size, cover);
 		}
 	}
@@ -113,6 +127,7 @@
 
 	.title{
 		position: absolute;
+		display: none;
 		top: 30%;
 		width: 60%;
 		left: 20%;
