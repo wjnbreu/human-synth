@@ -146,7 +146,7 @@
 	}
 
 	.image-body{
-		width: 80%;
+		width: 70%;
 		margin: 35px auto 0 auto;
 		height: auto;
 		display: block;
@@ -254,7 +254,8 @@
 					margin: 10px;
 				}
 				@media (max-width: $tab){
-					font-size: 1.5em;
+					font-size: 1em;
+					font-weight: bold;
 					li{
 						width: 90%;
 						margin-left: 5%;

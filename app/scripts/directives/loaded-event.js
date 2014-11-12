@@ -13,11 +13,10 @@ angular.module('humanSynthApp').directive('loadedEvent', function () {
 	var width = $(window).width();
 	var height = $(window).height();
 	var pWidth, pHeight;
-	var ratio = 4 / 3;
+	var ratio = 1920 / 1200;
 
 	var resize = function(element){
 
-		console.log('called');
 
 		width = $(window).width();
 		height = $(window).height();
@@ -34,7 +33,7 @@ angular.module('humanSynthApp').directive('loadedEvent', function () {
 			pHeight = Math.ceil(width / ratio);
 			element.width(width).height(pHeight).css({
 				left: 0,
-				top: (height - pHeight) /2
+				top: (height - pHeight) / 2
 			});
 		}
 
