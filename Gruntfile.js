@@ -58,12 +58,8 @@ module.exports = function (grunt) {
         files: [
           '<%= yeoman.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
-<<<<<<< HEAD
-          '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-=======
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.app %>/media/{,*/}*.{mp4,webm}'
->>>>>>> gh-pages
         ]
       }
     },
@@ -177,8 +173,6 @@ module.exports = function (grunt) {
       }
     },
 
-<<<<<<< HEAD
-=======
     //AWS
     aws: grunt.file.readJSON('env.json'),
 
@@ -195,7 +189,6 @@ module.exports = function (grunt) {
       }
     },
 
->>>>>>> gh-pages
     // Compiles Sass to CSS and generates necessary files if requested
     compass: {
       options: {
@@ -232,10 +225,7 @@ module.exports = function (grunt) {
           '<%= yeoman.dist %>/scripts/{,*/}*.js',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
           '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-<<<<<<< HEAD
-=======
           '<%= yeoman.dist %>/media/{,*/}*.{webm,mp4}',
->>>>>>> gh-pages
           '<%= yeoman.dist %>/styles/fonts/*'
         ]
       }
@@ -369,10 +359,7 @@ module.exports = function (grunt) {
             '*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
-<<<<<<< HEAD
-=======
             'media/*',
->>>>>>> gh-pages
             'fonts/*'
           ]
         }, {

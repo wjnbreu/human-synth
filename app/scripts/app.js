@@ -15,12 +15,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-<<<<<<< HEAD
-    'ng-contentful'
-=======
     'ng-contentful',
     'duScroll'
->>>>>>> gh-pages
   ])
   .config(function ($routeProvider, contentfulClientProvider) {
     $routeProvider

@@ -3,7 +3,4 @@ dist
 .tmp
 .sass-cache
 bower_components
-<<<<<<< HEAD
-=======
 env.json
->>>>>>> gh-pages
