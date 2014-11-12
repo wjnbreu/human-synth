@@ -15,7 +15,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ng-contentful'
+    'ng-contentful',
+    'duScroll'
   ])
   .config(function ($routeProvider, contentfulClientProvider) {
     $routeProvider

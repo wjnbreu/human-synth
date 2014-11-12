@@ -66,6 +66,43 @@ p{
     color: white;
     font-size: 2em;
   }
+  @media(max-width: 1024px){
+    display: none !important;
+  }
+}
+
+
+.flash{
+  display: block;
+  width: 400px;
+  position: fixed;
+  top: -10px;
+  left: 0;
+  height: 100px;
+  background-color: black;
+  z-index: 999;
+  text-align: center;
+  @include vendorize(box-shadow, 5px 5px 5px $gray);
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  box-sizing: border-box;
+  cursor: pointer;
+  p{
+    margin-top: 20px;
+    font-size: 1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 1.5;
+    a{
+      color: white;
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-device-width: 1024px){
+    display: none !important;
+  }
 }
 
 

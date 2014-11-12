@@ -1,7 +1,11 @@
-<section class="frame">
+<section class="frame" du-scroll-container>
 
   <section class="spinner" ng-show="!video">
     <div class="fa fa-circle-o-notch fa-spin" ng-show="!video"></div>
+  </section>
+
+  <section class="flash animate-if-slide" ng-if="flash" slide>
+    <p>Hey there, make sure to <a target="blank" href="http://get.adobe.com/flashplayer/">upgrade</a> and allow Flash to watch this video.</p>
   </section>
 
   <!--TITLE VIDEO-->
@@ -38,7 +42,12 @@
         <a href="https://www.facebook.com/sharer/sharer.php?u={{data.fields.shareUrl}}/" target="blank"><span class="fa fa-facebook"></span>
         </a>
       </div>
+
+      <div class="scroll-down">
+        <a href="#info" du-smooth-scroll><span class="fa fa-angle-down"></span></a>
+      </div>
     </section>
+
 
   </section> <!--END INTRO-->
 
@@ -51,7 +60,7 @@
   
 
   <!--INTRO TEXT-->
-  <section class="text-body">
+  <section class="text-body" id="info">
     <h1>{{data.fields.title}}</h1>
     <h2><a href="http://www.redbullmusicacademy.com/" target="blank">Red Bull Music Academy</a> <span class="lighter">x</span> <a href="http://rhizomatiks.com/" target="blank"><span class="rhizomatiks"></span></a></h2>
   </section>

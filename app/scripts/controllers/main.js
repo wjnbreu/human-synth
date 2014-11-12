@@ -17,17 +17,41 @@ angular.module('humanSynthApp').controller('MainCtrl', ['$scope', '$rootScope', 
 	$scope.intro = true;
 	$scope.links = [];
 	$scope.videoOn = true;
+	$scope.flash = false;
+
+	var timeout;
 
 
 
-	//drop spinner after video is ready
-	$rootScope.$on('playerready', function(data, player){
-		$scope.player = player;
-		$timeout(function(){
+	var notify = function(){
+
+
+		//if video ready never fires, drop spinner after 5 seconds
+		timeout = $timeout(function(){
 			$scope.video = true;
-		},500);
+			
+			//send notification
+			$scope.flash = true;
 
-	});
+		},5000);
+		
+		//drop spinner after video is ready
+		$rootScope.$on('playerready', function(data, player){
+			$scope.player = player;
+			
+			$timeout(function(){
+				$scope.video = true;
+				
+				//clear timeout if video event fires first
+				$timeout.cancel(timeout);
+
+			},500);
+
+		});
+
+	};
+
+	
 
 	//get data
 	contentfulClient.entries({'sys.id': '1twzxxkiC4wMWWyWEGuecq', 'include':10}).then(function(data){
@@ -55,6 +79,10 @@ angular.module('humanSynthApp').controller('MainCtrl', ['$scope', '$rootScope', 
 		$scope.player.pause();
 
 	};
+
+
+	//run notification
+	notify();
 
 
 }]);
