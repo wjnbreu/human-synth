@@ -28,7 +28,7 @@
     <a ng-if="!videoOn" class="exit-icon" ng-click="dropBody()"><div class="exit fa fa-times"></div></a>
  
     <!--BRIGHTCOVE-->
-    <section class="fullscreen-brightcove-video" id="player"></section>
+    <section class="fullscreen-brightcove-video" ng-class="{alreadyclicked: !videoOn}" id="player"></section>
 
      <!--SOCIAL-->
     <section class="button-group logo-group">
