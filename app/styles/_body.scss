@@ -149,6 +149,9 @@
 		img{
 			max-width: 80%;
 		}
+		@media (min-width: $wide){
+			margin-top: 25%;
+		}
 		@media (max-width: $tab){
 			margin-top: 40%;
 		}
