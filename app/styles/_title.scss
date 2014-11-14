@@ -61,8 +61,13 @@
 		text-align: center;
 		position: relative;
 		margin: 50px auto 0 auto;
+		@include vendorize(transform, translateX(-9999px));
+		&.alreadyclicked{
+			@include vendorize(transform, translateX(0));
+		}
 		@media (max-width: $phone){
 			margin-top: 40%;
+			width: 100%;
 		}
 	}
 
@@ -132,7 +137,7 @@
 		.scroll-down{
 			margin-top: 20px;
 			span{
-				font-size: 3em;
+				font-size: 1.5em;
 				@include vendorize(animation, bounce 1s infinite alternate);
 			}
 		}

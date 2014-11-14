@@ -61,7 +61,6 @@ angular.module('humanSynthApp').controller('MainCtrl', ['$scope', '$rootScope', 
 
 		var videoId = $scope.data.fields.videoId;
 		$scope.links = $scope.data.fields.links.links;
-		console.log($scope.links);
 		//instantiate video player
 		brightcove.init(videoId);
 	
