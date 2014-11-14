@@ -41,6 +41,11 @@ angular.module('humanSynthApp').factory('brightcove', ['$rootScope', function ($
     var newWidth = $(window).width() / 1.4;
     var newHeight = ($(window).width() / 1.4) / vidRatio;
 
+    if (newWidth < 768){
+      newWidth = newWidth * 1.2;
+      newHeight = newWidth / vidRatio;
+    }
+
     videoContainer.attr('width', newWidth);
     videoContainer.attr('height', newHeight);
 
@@ -71,6 +76,13 @@ angular.module('humanSynthApp').factory('brightcove', ['$rootScope', function ($
   };
 
   var init = function(id){
+
+    
+    //if on device, make it bigger
+    if (width < 768){
+      width = width * 1.2;
+      height = width / vidRatio;
+    }
 
     playerData = {
       'playerID' : '1890493041001',

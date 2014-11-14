@@ -3,7 +3,7 @@
 	left: 0;
 	width: 100%;
 	height: auto;
-	top: 100%;
+	top: 105%;
 	z-index: 1;
 	display: block;
 	background: rgba(0,0,0,1);
@@ -31,20 +31,24 @@
 			height: 3px;
 			background: white;
 			display: block;
+			margin-top: -10px;
 			@media (max-width: $phone){
 				margin-left: 5%;
 			}
 		}
 		h1{
-			margin-top: 15px;
 			line-height: 1;
+			font-size: 3.5em;
+			margin: 0;
+			margin-top: 15px;
 			@media (max-width: $phone){
 				font-size: 2em;
 				margin-left: 5%;
 			}
 		}
 		h2{
-			margin-top: -55px;
+			margin: 0;
+			margin-bottom: 20px;
 			line-height: 40px;
 			@media (max-width:$phone){
 				font-size: 0.8em;
@@ -77,7 +81,8 @@
 	}
 
 	.image-body{
-		width: 70%;
+		width: 80%;
+		max-width: 1000px;
 		margin: 35px auto 0 auto;
 		height: auto;
 		display: block;
@@ -99,7 +104,7 @@
 				}
 				@media (max-width: $phone){
 					position: relative;
-					width: 100%;
+					width: 95%;
 					margin-left: 5%;
 				}
 			}
@@ -114,7 +119,7 @@
 				line-height: 1.5;
 				p{
 					margin: 0;
-					font-size: 1em;
+					font-size: 0.9em;
 					font-weight: bold;
 				}
 				@media (max-width: $tab){
@@ -134,9 +139,12 @@
 
 	.full-synth-image{
 		width: 100%;
+		max-width: 1000px;
+		height: auto;
 		display: block;
 		position: static;
 		text-align: center;
+		margin: auto;
 		margin-top: 30%;
 		img{
 			max-width: 80%;
@@ -158,15 +166,37 @@
 		text-align: center;
 		margin-top: 10%;
 		h1{
-			text-align: center;
+			text-align: left;
 			margin: 0;
+			width: 80%;
+			font-size: 3em;
+			margin-left: 10%;
 			line-height: 1.2;
+			&:before{
+				content: '';
+				height: 3px;
+				display: block;
+				margin-bottom: 15px;
+				background: white;
+			}
+
+			&:after{
+				content: '';
+				margin-top: 15px;
+				margin-bottom: 50px;
+				height: 3px;
+				display: block;
+				background: white;
+			}
+
+
+
+
 			@media (max-width: $tab){
 				font-size: 2em;
-			}
-			@media (max-width: $phone){
-				width: 90%;
-				margin-left: 5%;
+				width: 70%;
+				margin-left: 15%;
+				margin-top: 15%;
 			}
 		}
 
@@ -185,13 +215,20 @@
 					margin: 10px;
 				}
 				@media (max-width: $tab){
-					font-size: 1em;
 					font-weight: bold;
 					li{
 						width: 90%;
 						margin-left: 5%;
 						line-height: 1.5;
-						text-decoration: underline;
+						a{
+							font-weight: bold;
+						}
+					}
+				}
+				@media (max-width: $phone){
+					font-size: 1.3em;
+					li{
+						margin-bottom: 20px;
 					}
 				}
 
@@ -204,11 +241,9 @@
 				-webkit-font-smoothing: antialiased;
 				a{
 					color: white;
-				}
-				&:hover{
-					background-color: white;
-					a{
-						color: black !important;
+					box-sizing: border-box;
+					&:hover{
+						border-bottom: 3px dashed white;
 					}
 				}
 			}
@@ -246,6 +281,12 @@
 				position: relative;
 				margin-bottom: 0;
 				min-height: 0;
+				&:before{
+					content: '+';
+					display: block;
+					color: white;
+					text-align: center;
+				}
 			}
 		}
 
@@ -257,24 +298,22 @@
 			text-align: center;
 			li{
 				padding: none;
-				font-size: 1em;
+				font-size: 0.9em;
 				height: 20px;
 				vertical-align: middle;
 				line-height: 20px;
 				margin-bottom: 10px;
-				&:hover{
-					background-color: white;
-					a{
-						color: black;
+				a{
+					box-sizing: border-box;
+					&:hover{
+						border-bottom: 3px dashed white;
 					}
-				}
-				@media (max-width: $tab){
-					text-decoration: underline;
 				}
 				@media (max-width: $phone){
 					margin-bottom: 0;
 					line-height: 45px;
 					height: 45px;
+					font-weight: normal;
 				}
 			}
 		}
