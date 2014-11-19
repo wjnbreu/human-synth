@@ -33,7 +33,7 @@ angular.module('humanSynthApp').controller('MainCtrl', ['$scope', '$rootScope', 
 			//send notification
 			$scope.flash = true;
 
-		},5000);
+		},7000);
 		
 		//drop spinner after video is ready
 		$rootScope.$on('playerready', function(data, player){
